@@ -2,26 +2,22 @@
 using namespace std;
 void solve()
 {
-    int   i=0, j=0, count47=0 , lucky=0;
-    string s ,new_s;
+    int n,count=0;
+    string s;
+    
+    cin>>n; 
     cin>>s;
 
-    while(i<s.size())
+    for(int i=0 ; i<n ; i++)
     {
-        (s[i]=='4' || s[i]=='7')? count47++ : count47=count47; 
-        i++;
-    }
-    
-    new_s=to_string(count47);
-
-    while(j<new_s.size())
-    {
-        (new_s[j]=='4' ||new_s[j]=='7')? lucky++ :lucky=lucky;
-        j++;
-        
+        if(s[i]==s[i+1])
+        {
+            count++;
+        }
     }
 
-    cout<<(lucky==new_s.size()?"YES" :"NO"); 
+    cout<<count;
+
 }
 
 int main()
