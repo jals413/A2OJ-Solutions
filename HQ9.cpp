@@ -5,7 +5,6 @@ void solve()
     string n;
     int count = 0;
     cin >> n;
-
     for (int i = 0; i < n.size(); i++)
     {
         if (n[i] == 'H' || n[i] == 'Q' || n[i] == '9')
