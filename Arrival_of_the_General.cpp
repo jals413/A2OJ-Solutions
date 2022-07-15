@@ -3,39 +3,37 @@ using namespace std;
 void solve()
 {
     int n;
-    cin>>n;
+    cin >> n;
     int a;
-    int min=0 , max=0 , max_pos=1 , min_pos=1 ,ans;
-    cin>>a;
-    min=max=a;
-    
+    int min = 0, max = 0, max_pos = 1, min_pos = 1, ans;
+    cin >> a;
+    min = max = a;
 
-    for(int i=2; i<=n; i++)
+    for (int i = 2; i <= n; i++)
     {
-        cin>>a;
+        cin >> a;
 
-        if(a<=min)
+        if (a <= min)
         {
-            min=a;
-            min_pos=i;
+            min = a;
+            min_pos = i;
         }
-        else if(a>max)
+        else if (a > max)
         {
-            max=a;
-            max_pos=i;
+            max = a;
+            max_pos = i;
         }
     }
-    if(max_pos>min_pos)
+    if (max_pos > min_pos)
     {
-        ans=(max_pos-1)+(n-min_pos)-1;
-        cout<<ans;
+        ans = (max_pos - 1) + (n - min_pos) - 1;
+        cout << ans;
     }
     else
     {
-        ans=(max_pos-1)+(n-min_pos);
-        cout<<ans;
+        ans = (max_pos - 1) + (n - min_pos);
+        cout << ans;
     }
-
 }
 
 int main()
